@@ -19,6 +19,9 @@ app.use(cors({
     credentials: true
   }));
 
+  app.get("/",(req,res)=>{
+    res.send("Hello ")
+  })
 app.use("/auth", authRoutes);
 app.use(errorHandler);
 

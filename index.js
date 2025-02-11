@@ -4,12 +4,11 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const errorHandler = require("./middlewares/errorHandler");
-const DBconnection=require("./prisma/DBconnection")
+
 
 const app = express();
 const port = process.env.PORT || 8000;
 
-DBconnection()
 
 
 app.use(express.json());

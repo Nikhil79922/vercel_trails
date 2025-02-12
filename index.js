@@ -1,4 +1,5 @@
 const express = require("express");
+const path=require("path")
 require("dotenv").config();
 const cors = require("cors");
 
@@ -8,6 +9,9 @@ const DBconnection = require("./prisma/DBconnection");
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Serve favicon.ico from the public folder
+app.use("/favicon.ico", express.static(path.join(__dirname, "public", "favicon.ico")));
 
 DBconnection();
 

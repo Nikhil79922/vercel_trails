@@ -49,22 +49,23 @@ const forgotPassword = async ({ email }) => {
           <title>Password Reset</title>
           <script src="https://cdn.tailwindcss.com"></script>
         </head>
-        <body class="bg-gradient-to-r from-blue-100 to-indigo-200 flex items-center justify-center min-h-screen">
-          <div class="bg-white shadow-lg rounded-lg max-w-lg w-full p-8 text-center space-y-6">
-            <h1 class="text-3xl font-semibold text-gray-900">Reset Your Password</h1>
-            <p class="text-gray-700 font-medium">You requested to reset your password. Click the button below to proceed.</p>
-            <div class="mt-8">
-              <a href="${link}" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-200">
+        <body class="bg-gradient-to-r from-teal-300 to-blue-500 flex justify-center items-center min-h-screen">
+          <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full text-center space-y-6">
+            <h1 class="text-3xl font-semibold text-gray-900 tracking-wide">Reset Your Password</h1>
+            <p class="text-gray-600 text-lg">You requested to reset your password. Click the button below to proceed.</p>
+            <div>
+              <a href="${link}" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-200 hover:scale-105 hover:shadow-2xl">
                 Reset Password
               </a>
             </div>
-            <hr class="my-6 border-gray-200">
+            <hr class="border-gray-300 my-6">
             <p class="text-sm text-gray-500">If you didn’t request a password reset, please ignore this email or contact support.</p>
           </div>
         </body>
       </html>
     `,
   });
+  
 
   return { message: "Email sent successfully" };
 };

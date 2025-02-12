@@ -49,21 +49,17 @@ const forgotPassword = async ({ email }) => {
           <title>Password Reset</title>
           <script src="https://cdn.tailwindcss.com"></script>
         </head>
-        <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-          <div class="bg-white shadow-lg rounded-lg max-w-md w-full p-6 text-center">
-            <h1 class="text-2xl font-bold text-gray-800">Reset Your Password</h1>
-            <p class="text-gray-600 mt-4">
-              You requested to reset your password. Please click the button below to proceed with resetting your password.
-            </p>
-            <div class="mt-6">
-              <a href="${link}" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full text-lg">
+        <body class="bg-gradient-to-r from-blue-100 to-indigo-200 flex items-center justify-center min-h-screen">
+          <div class="bg-white shadow-lg rounded-lg max-w-lg w-full p-8 text-center space-y-6">
+            <h1 class="text-3xl font-semibold text-gray-900">Reset Your Password</h1>
+            <p class="text-gray-700 font-medium">You requested to reset your password. Click the button below to proceed.</p>
+            <div class="mt-8">
+              <a href="${link}" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-200">
                 Reset Password
               </a>
             </div>
-            <hr class="my-6 border-gray-300">
-            <p class="text-sm text-gray-500">
-              If you did not request a password reset, please ignore this email or contact support.
-            </p>
+            <hr class="my-6 border-gray-200">
+            <p class="text-sm text-gray-500">If you didn’t request a password reset, please ignore this email or contact support.</p>
           </div>
         </body>
       </html>
@@ -72,6 +68,7 @@ const forgotPassword = async ({ email }) => {
 
   return { message: "Email sent successfully" };
 };
+
 
 const resetPassword = async ({ token, password }) => {
   const decoded = jwt.verify(token, process.env.SECRET);

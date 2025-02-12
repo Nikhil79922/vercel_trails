@@ -7,7 +7,7 @@ const errorHandler = require("./middlewares/errorHandler");
 const DBconnection = require("./prisma/DBconnection");
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 DBconnection();
 
